@@ -42,6 +42,34 @@
 				//alert(  $( ".Depth03:contains('회원정보조회')" ) );
 		 		$(window.parent.frames["rightFrame"].document.location).attr("href","/user/listUser");
 			}); 
+			
+			
+		 	//==> 판매상품등록 Event 연결처리부분
+			//==> DOM Object GET 3가지 방법 ==> 1. $(tagName) : 2.(#id) : 3.$(.className)
+		 	$( ".Depth03:contains('판매상품등록')" ).on("click" , function() {
+				//Debug..
+				//alert(  $( ".Depth03:contains('판매상품등록')" ).html() );
+				$(window.parent.frames["rightFrame"].document.location).attr("href","../product/addProductView.jsp;");
+			});
+			
+			
+		 	//==> 판매상품관리 Event 연결처리부분
+			//==> DOM Object GET 3가지 방법 ==> 1. $(tagName) : 2.(#id) : 3.$(.className)
+		 	$( ".Depth03:contains('판매상품관리')" ).on("click" , function() {
+				//Debug..
+				//alert(  $( ".Depth03:contains('판매상품관리')" ).html() );
+				$(window.parent.frames["rightFrame"].document.location).attr("href","/product/listProduct?menu=manage");
+			});	
+			
+			
+		 	//==> 판매상품관리 Event 연결처리부분
+			//==> DOM Object GET 3가지 방법 ==> 1. $(tagName) : 2.(#id) : 3.$(.className)
+		 	$( ".Depth03:contains('상 품 검 색')" ).on("click" , function() {
+				//Debug..
+				//alert(  $( ".Depth03:contains('상 품 검 색')" ).html() );
+				$(window.parent.frames["rightFrame"].document.location).attr("href","/product/listProduct?menu=search");
+			});
+			
 		});	
 		 
 	</script>
@@ -93,12 +121,18 @@
 			<table  border="0" cellspacing="0" cellpadding="0" width="159">
 				<tr>
 					<td class="Depth03">
+					<!-- ////////////////// jQuery Event 처리로 변경됨 /////////////////////////
 						<a href="../product/addProductView.jsp;" target="rightFrame">판매상품등록</a>
+						////////////////////////////////////////////////////////////////////////////////////////////////// -->
+						판매상품등록
 					</td>
 				</tr>
 				<tr>
 					<td class="Depth03">
+					<!-- ////////////////// jQuery Event 처리로 변경됨 /////////////////////////
 						<a href="/listProduct.do?menu=manage"  target="rightFrame">판매상품관리</a>
+						////////////////////////////////////////////////////////////////////////////////////////////////// -->
+						판매상품관리						
 					</td>
 				</tr>
 				<tr>
@@ -115,7 +149,10 @@
 		<table  border="0" cellspacing="0" cellpadding="0" width="159">
 			<tr>
 				<td class="Depth03">
+				<!-- ////////////////// jQuery Event 처리로 변경됨 /////////////////////////
 					<a href="/listProduct.do?menu=search" target="rightFrame">상 품 검 색</a>
+					////////////////////////////////////////////////////////////////////////////////////////////////// -->
+					상 품 검 색
 				</td>
 			</tr>
 			

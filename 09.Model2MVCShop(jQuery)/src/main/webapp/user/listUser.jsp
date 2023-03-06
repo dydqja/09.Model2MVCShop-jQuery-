@@ -43,7 +43,7 @@
 			//==> 3 과 1 방법 조합 : $(".className tagName:filter함수") 사용함.
 			$( ".ct_list_pop td:nth-child(3)" ).on("click" , function() {
 					//Debug..
-					//alert(  $( this ).text().trim() );
+					alert(  $( this ).text().trim() );
 					self.location ="/user/getUser?userId="+$(this).text().trim();
 			});
 			

@@ -73,6 +73,7 @@
 			//document.detailForm.action='/user/addUser';
 			//document.detailForm.submit();
 			$("form").attr("method" , "POST").attr("action" , "/user/addUser").submit();
+			//<form method="post" action="/user/addUser"> </form>
 		}
 		//===========================================//
 		//==> 추가된부분 : "가입"  Event 연결
@@ -190,7 +191,7 @@
 <!-- ////////////////// jQuery Event 처리로 변경됨 ///////////////////////// 
 <form name="detailForm"  method="post" >
 ////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<form name="detailForm">
+<form name="detailForm"> 
 
 <table width="100%" height="37" border="0" cellpadding="0"	cellspacing="0">
 	<tr>
